@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.areaTotal {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 15em;
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+}
+
+.areaTotal .resultado, .areaTotal .tecla {
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.resultado {
+    height: 3em;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.conteudoResultado {
+    height: 100%;
+    font-size: 2.5em;
+    padding-right: 5px;
+}
+
+.operacaoResultado {
+    font-size: 2.5em;
+    padding-left: 5px;
+}
+
+.linha {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.tecla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3em;
+    height: 3em;
+}
+
+.tecla > span {
+    font-size: 1.5em;
+}
+
+.tecla:hover {
+    background: grey;
+    color: white;
+}

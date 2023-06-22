@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'calculadora939';
+
+  valorDaOperacao = "";
+  
+  adicionarValor(event: any): void {
+    this.valorDaOperacao += event.currentTarget.textContent;
+  }
+
 }
