@@ -6,11 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  private static readonly VAZIO_DEFAULT = "";
 
-  valorDaOperacao = "";
+  valorDaOperacao = AppComponent.VAZIO_DEFAULT;
   
-  adicionarValor(event: any): void {
-    this.valorDaOperacao += event.currentTarget.textContent;
+  acionarTecla(valorOuOperacao: string): void {
+    if(valorOuOperacao == "C") {
+      this.valorDaOperacao = AppComponent.VAZIO_DEFAULT;
+    }
+    else if(valorOuOperacao == "=") {
+      try {
+        this.valorDaOperacao = eval(this.valorDaOperacao);
+      }
+      catch(erro){
+        alert("Operação é inválida, fio!");
+      }
+    }
+    else {
+      this.valorDaOperacao += valorOuOperacao;
+    }
+
+    console.log(this.valorDaOperacao);
   }
 
 }

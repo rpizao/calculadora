@@ -23,6 +23,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: end;
+    text-align: right;
+    font-size: 30px;
 }
 
 .conteudoResultado {

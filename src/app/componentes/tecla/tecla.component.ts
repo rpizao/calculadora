@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'tecla',
@@ -8,19 +8,25 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TeclaComponent implements OnInit {
 
   @Input()
+  rotulo: string;
+
+  @Input()
   valor: string;
+
+  @Output()
+  clicar = new EventEmitter<string>();
   
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  private descricaoDaTecla(): string {
-    return `Valor [${this.valor}]!`;
+  exibirRotuloSeHouver(): string {
+    return this.rotulo == null ? this.valor : this.rotulo;
   }
 
-  exibirMensagemNoConsole(): void {
-    console.log(this.descricaoDaTecla());
+  clicado() {
+    this.clicar.emit(this.valor);
   }
 
 }

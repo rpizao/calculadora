@@ -7,85 +7,98 @@
 
   <body>
     <div class="areaTotal">
-      <div class="resultado">
+      <!-- <div class="resultado">
         <span class="conteudoResultado">{{valorDaOperacao}}</span>
-      </div>
+      </div> -->
+      <input class="resultado" type="text" [(ngModel)]="valorDaOperacao"
+        (keyup.enter)="acionarTecla('=')">
 
       <div class="linha">
         <!-- <div class="tecla">
           <span class="operacao">C</span>
         </div> -->
 
-        <tecla valor="C"></tecla>
+        <tecla valor="C" (clicar)="acionarTecla($event)"></tecla>
       </div>
 
       <div class="linha">
         <!-- <div class="tecla">
           <span class="conteudoTecla">7</span>
         </div> -->
-        <tecla valor="7" (click)="adicionarValor($event)"></tecla>
+        <tecla valor="7" (clicar)="acionarTecla($event)"></tecla>
         <!-- <div class="tecla">
           <span class="conteudoTecla">8</span>
         </div> -->
-        <tecla valor="8" (click)="adicionarValor($event)"></tecla>
+        <tecla valor="8" (clicar)="acionarTecla($event)"></tecla>
         <!-- <div class="tecla">
           <span class="conteudoTecla">9</span>
         </div> -->
-        <tecla valor="9"></tecla>
+        <tecla valor="9" (clicar)="acionarTecla($event)"></tecla>
 
         <!-- <div class="tecla">
           <span class="operacao">&divide;</span>
         </div> -->
-        <tecla valor="&divide;"></tecla>
+        <tecla rotulo="&divide;" valor="/" (clicar)="acionarTecla($event)"></tecla>
 
       </div>
 
       <div class="linha">
-        <div class="tecla">
+        <!-- <div class="tecla">
           <span class="conteudoTecla">4</span>
-        </div>
-        <div class="tecla">
+        </div> -->
+        <tecla valor="4" (clicar)="acionarTecla($event)"></tecla>
+        <!-- <div class="tecla">
           <span class="conteudoTecla">5</span>
-        </div>
-        <div class="tecla">
+        </div> -->
+        <tecla valor="5" (clicar)="acionarTecla($event)"></tecla>
+        <!-- <div class="tecla">
           <span class="conteudoTecla">6</span>
-        </div>
+        </div> -->
+        <tecla valor="6" (clicar)="acionarTecla($event)"></tecla>
 
         <!-- <div class="tecla">
           <span class="operacao"></span>
         </div> -->
-        <tecla valor="&times;"></tecla>
+        <tecla rotulo="&times;" valor="*" (clicar)="acionarTecla($event)"></tecla>
       </div>
 
       <div class="linha">
-        <div class="tecla">
+        <!-- <div class="tecla">
           <span class="conteudoTecla">1</span>
-        </div>
-        <div class="tecla">
+        </div> -->
+        <tecla valor="1" (clicar)="acionarTecla($event)"></tecla>
+
+        <!-- <div class="tecla">
           <span class="conteudoTecla">2</span>
-        </div>
-        <div class="tecla">
+        </div> -->
+        <tecla valor="2" (clicar)="acionarTecla($event)"></tecla>
+
+        <!-- <div class="tecla">
           <span class="conteudoTecla">3</span>
-        </div>
+        </div> -->
+        <tecla valor="3" (clicar)="acionarTecla($event)"></tecla>
 
         <!-- <div class="tecla">
           <span class="operacao">&#43;</span>
         </div> -->
-        <tecla valor="&#43;"></tecla>
+        <tecla valor="&#43;" (clicar)="acionarTecla($event)"></tecla>
       </div>
 
       <div class="linha">
-        <div class="tecla">
+        <!-- <div class="tecla">
           <span class="conteudoTecla">0</span>
-        </div>
-        <div class="tecla">
+        </div> -->
+        <tecla valor="0" (clicar)="acionarTecla($event)"></tecla>
+
+        <!-- <div class="tecla">
           <span class="operacao">&#61;</span>
-        </div>
+        </div> -->
+        <tecla valor="&#61;" (clicar)="acionarTecla($event)"></tecla>
 
         <!-- <div class="tecla">
           <span class="operacao">&minus;</span>
         </div> -->
-        <tecla valor="&minus;"></tecla>
+        <tecla rotulo="&minus;" valor="-" (clicar)="acionarTecla($event)"></tecla>
 
       </div>
 
