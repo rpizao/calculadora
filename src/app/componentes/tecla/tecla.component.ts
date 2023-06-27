@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, OnChanges, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'tecla',
   templateUrl: './tecla.component.html',
   styleUrls: ['./tecla.component.css']
 })
-export class TeclaComponent implements OnInit {
+export class TeclaComponent {
 
   @Input()
   rotulo: string;
@@ -13,12 +13,12 @@ export class TeclaComponent implements OnInit {
   @Input()
   valor: string;
 
+  visivel: boolean;
+
   @Output()
   clicar = new EventEmitter<string>();
   
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
   }
 
   exibirRotuloSeHouver(): string {

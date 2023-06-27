@@ -18,7 +18,7 @@
           <span class="operacao">C</span>
         </div> -->
 
-        <tecla valor="C" (clicar)="acionarTecla($event)"></tecla>
+        <tecla valor="C" (clicar)="limparOperacao()"></tecla>
       </div>
 
       <div class="linha">
@@ -93,7 +93,7 @@
         <!-- <div class="tecla">
           <span class="operacao">&#61;</span>
         </div> -->
-        <tecla valor="&#61;" (clicar)="acionarTecla($event)"></tecla>
+        <tecla valor="&#61;" (clicar)="confirmarOperacao()"></tecla>
 
         <!-- <div class="tecla">
           <span class="operacao">&minus;</span>
@@ -103,5 +103,14 @@
       </div>
 
     </div>
+    
+    <div>
+      <span *ngFor="let historico of historicoOperacoes">
+        {{historico.operacao}}
+        <span style="color: red;" *ngIf="historico.ocorreuErro"> (Operação inválida!)</span>
+        <br>
+      </span>
+    </div>
+
   </body>
 </html>
